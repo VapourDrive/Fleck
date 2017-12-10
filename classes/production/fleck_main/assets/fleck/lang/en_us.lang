@@ -1,0 +1,27 @@
+//English language file for Fleck
+
+
+//Items
+item.fleck.chunkiron.name=Iron Chunk
+item.fleck.chunkcoal.name=Coal Chunk
+item.fleck.chunkgold.name=Gold Chunk
+item.fleck.chunklapis.name=Lapis Chunk
+item.fleck.chunkemerald.name=Emerald Chunk
+item.fleck.chunkdiamond.name=Diamond Chunk
+item.fleck.chunkredstone.name=Redstone Chunk
+item.fleck.chunkquartz.name=Quartz Chunk
+item.fleck.chunkcopper.name=Copper Chunk
+item.fleck.chunktin.name=Tin Chunk
+item.fleck.chunkaluminum.name=Aluminum Chunk
+item.fleck.chunklead.name=Lead Chunk
+item.fleck.chunksilver.name=Silver Chunk
+item.fleck.chunknickel.name=Nickel Chunk
+item.fleck.chunkplatinum.name=Platinum Chunk
+item.fleck.chunkmithril.name=Mithril Chunk
+
+//Chunks
+chunk.purity.crude=Crude
+chunk.purity.rough=Rough
+chunk.purity.fair=Fair
+chunk.purity.pure=Pure
+chunk.purity.pristine=Pristine

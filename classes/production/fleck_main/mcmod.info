@@ -1,0 +1,16 @@
+[
+{
+  "modid": "fleck",
+  "name": "Fleck",
+  "description": "Small set of additiond and changes",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["VapourDrive"],
+  "credits": "Forge devs, and anyone with open source code I have used as reference",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

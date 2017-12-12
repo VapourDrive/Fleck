@@ -1,4 +1,4 @@
-package vapourdrive.fleck.Materials.Ores;
+package vapourdrive.fleck.materials.Ores;
 
 import java.util.ArrayList;
 

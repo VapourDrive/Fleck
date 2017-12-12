@@ -1,9 +1,7 @@
-package vapourdrive.fleck.Materials.Ores;
+package vapourdrive.fleck.materials.Ores;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import org.apache.logging.log4j.Level;
-import vapourdrive.fleck.Fleck;
 import vapourdrive.fleck.items.EnumPurity;
 
 import java.util.Random;

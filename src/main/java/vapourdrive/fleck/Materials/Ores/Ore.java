@@ -1,8 +1,4 @@
-package vapourdrive.fleck.Materials.Ores;
-
-import vapourdrive.fleck.items.EnumPurity;
-
-import java.util.ArrayList;
+package vapourdrive.fleck.materials.Ores;
 
 /**
  * Created by CBos on 11/25/2017.

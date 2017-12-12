@@ -1,12 +1,10 @@
-package vapourdrive.fleck.Materials;
+package vapourdrive.fleck.materials;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
-import org.apache.logging.log4j.Level;
-import vapourdrive.fleck.Fleck;
-import vapourdrive.fleck.Materials.Ores.ChunkComponent;
-import vapourdrive.fleck.Materials.Ores.Ore;
+import vapourdrive.fleck.materials.Ores.ChunkComponent;
+import vapourdrive.fleck.materials.Ores.Ore;
 import vapourdrive.fleck.items.FleckItems;
 
 import java.util.ArrayList;

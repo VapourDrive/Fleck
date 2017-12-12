@@ -3,22 +3,16 @@ package vapourdrive.fleck.items;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import vapourdrive.fleck.Materials.Ores.Chunk;
-import vapourdrive.fleck.Materials.Ores.ChunkComponent;
-import vapourdrive.fleck.Materials.Ores.Ore;
+import vapourdrive.fleck.materials.Ores.Chunk;
+import vapourdrive.fleck.materials.Ores.ChunkComponent;
+import vapourdrive.fleck.materials.Ores.Ore;
 import vapourdrive.fleck.Reference;
 import vapourdrive.fleck.Utils.RandomUtils;
 import vapourdrive.fleck.items.models.ChunkModel;
 
-import javax.annotation.CheckForNull;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 
 /**
  * Created by CBos on 11/24/2017.

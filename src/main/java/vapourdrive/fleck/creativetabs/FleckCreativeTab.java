@@ -1,16 +1,10 @@
 package vapourdrive.fleck.creativetabs;
 
-import com.sun.xml.internal.bind.v2.TODO;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import vapourdrive.fleck.Materials.OreHandler;
 import vapourdrive.fleck.items.FleckItems;
-
-import java.util.Random;
 
 /**
  * Created by CBos on 11/27/2017.

@@ -4,16 +4,12 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
-import org.apache.logging.log4j.Level;
-import vapourdrive.fleck.Fleck;
-import vapourdrive.fleck.Materials.Ores.Ore;
+import vapourdrive.fleck.materials.Ores.Ore;
 import vapourdrive.fleck.items.FleckItems;
 
 /**

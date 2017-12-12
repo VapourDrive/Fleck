@@ -8,8 +8,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import org.apache.logging.log4j.Level;
 import vapourdrive.fleck.Fleck;
-import vapourdrive.fleck.Materials.OreHandler;
-import vapourdrive.fleck.Materials.Ores.Ore;
+import vapourdrive.fleck.materials.OreHandler;
+import vapourdrive.fleck.materials.Ores.Ore;
 import vapourdrive.fleck.Reference;
 import vapourdrive.fleck.items.FleckItems;
 

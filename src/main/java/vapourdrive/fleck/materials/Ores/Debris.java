@@ -5,20 +5,20 @@ import java.util.ArrayList;
 /**
  * Created by CBos on 12/4/2017.
  */
-public class Chunk {
+public class Debris {
 
     private final String oreDict;
     private final String chunkName;
     private final String material;
-    private final ArrayList<ChunkComponent> ChunkComponents;
+    private final ArrayList<DebrisComponent> ChunkComponents;
 
-    public Chunk(String oreDict, String material, ArrayList<ChunkComponent> ChunkComponents) {
+    public Debris(String oreDict, String material, ArrayList<DebrisComponent> ChunkComponents) {
         this.oreDict = oreDict;
         this.chunkName = "";
         this.material = material;
         this.ChunkComponents = ChunkComponents;
     }
-    public Chunk(String oreDict, String chunkName, String material, ArrayList<ChunkComponent> ChunkComponents) {
+    public Debris(String oreDict, String chunkName, String material, ArrayList<DebrisComponent> ChunkComponents) {
         this.oreDict = oreDict;
         this.chunkName = chunkName;
         this.material = material;
@@ -45,7 +45,7 @@ public class Chunk {
         return this.material;
     }
 
-    public ArrayList<ChunkComponent> getComponents() {
+    public ArrayList<DebrisComponent> getComponents() {
         return this.ChunkComponents;
     }
 }

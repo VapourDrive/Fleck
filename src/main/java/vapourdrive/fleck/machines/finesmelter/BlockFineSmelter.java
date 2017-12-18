@@ -20,6 +20,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.logging.log4j.Level;
@@ -49,6 +50,7 @@ public class BlockFineSmelter extends Block implements ITileEntityProvider {
     @SideOnly(Side.CLIENT)
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFineSmelter.class, new FineSmelterTESR());
     }
 
     @Override
@@ -63,7 +65,7 @@ public class BlockFineSmelter extends Block implements ITileEntityProvider {
     @Nullable
     @Override
     public TileEntity createNewTileEntity(World world, int i) {
-        return null;
+        return new TileEntityFineSmelter();
     }
 
     @Override

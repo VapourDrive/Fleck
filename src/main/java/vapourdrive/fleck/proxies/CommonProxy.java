@@ -3,7 +3,6 @@ package vapourdrive.fleck.proxies;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -17,7 +16,7 @@ import vapourdrive.fleck.blocks.FleckBlocks;
 import vapourdrive.fleck.creativetabs.FleckCreativeTab;
 import vapourdrive.fleck.events.EventHandler;
 import vapourdrive.fleck.items.FleckItems;
-import vapourdrive.fleck.items.ItemChunk;
+import vapourdrive.fleck.items.ItemDebris;
 import vapourdrive.fleck.machines.finesmelter.ItemFineSmelter;
 import vapourdrive.fleck.machines.finesmelter.TileFineSmelter;
 
@@ -52,7 +51,7 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        event.getRegistry().register(new ItemChunk());
+        event.getRegistry().register(new ItemDebris());
         event.getRegistry().register(new ItemFineSmelter(FleckBlocks.FineSmelter));
     }
 

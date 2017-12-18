@@ -9,10 +9,10 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import vapourdrive.fleck.items.ItemDebris;
 import vapourdrive.fleck.materials.OreHandler;
 import vapourdrive.fleck.Utils.RandomUtils;
 import vapourdrive.fleck.items.FleckItems;
-import vapourdrive.fleck.items.ItemChunk;
 
 /**
  * Created by CBos on 11/28/2017.
@@ -29,7 +29,7 @@ public class DropHandler {
 
                     if (block != Blocks.AIR && OreHandler.doesChunkExistForBlock(block)) {
                         event.getDrops().remove(i);
-                        ItemStack chunk = getChunk(player, event.getWorld(), player.getHeldItem(EnumHand.MAIN_HAND), event.getState(), block, event.getFortuneLevel());
+                        ItemStack chunk = getDebris(player, event.getWorld(), player.getHeldItem(EnumHand.MAIN_HAND), event.getState(), block, event.getFortuneLevel());
                         event.getDrops().add(chunk);
                     }
 
@@ -37,7 +37,7 @@ public class DropHandler {
                     block = event.getState().getBlock();
                     if (OreHandler.doesChunkExistForBlock(block)){
                         event.getDrops().remove(i);
-                        ItemStack chunk = getChunk(player, event.getWorld(), player.getHeldItem(EnumHand.MAIN_HAND), event.getState(), block, event.getFortuneLevel());
+                        ItemStack chunk = getDebris(player, event.getWorld(), player.getHeldItem(EnumHand.MAIN_HAND), event.getState(), block, event.getFortuneLevel());
                         event.getDrops().add(chunk);
                     }
                 }
@@ -45,7 +45,7 @@ public class DropHandler {
         }
     }
 
-    public ItemStack getChunk(EntityPlayer player, World world, ItemStack tool, IBlockState state, Block block, int fortune) {
+    public ItemStack getDebris(EntityPlayer player, World world, ItemStack tool, IBlockState state, Block block, int fortune) {
         float expLevel = (float) player.experienceLevel;
         float expLevelMultiplier = expLevel/250.0f;
         float fortuneMultiplier = ((float) fortune)/5.5f;
@@ -57,10 +57,10 @@ public class DropHandler {
             purity = 4;
         }
 
-        ItemStack chunk = new ItemStack(FleckItems.ItemChunk, 1, OreHandler.getMetaFromChunkName(OreHandler.getChunkForBlock(block)));
+        ItemStack debris = new ItemStack(FleckItems.ItemDebris, 1, OreHandler.getMetaFromChunkName(OreHandler.getChunkForBlock(block)));
 
-        RandomUtils.getNBT(chunk).setInteger(ItemChunk.PurityKey, purity);
-        return chunk;
+        RandomUtils.getNBT(debris).setInteger(ItemDebris.PurityKey, purity);
+        return debris;
 
     }
 }

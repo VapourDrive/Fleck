@@ -18,38 +18,38 @@ import java.util.Iterator;
 /**
  * Created by CBos on 11/24/2017.
  */
-public class ChunkModel {
+public class DebrisModel {
     public static void init() {
         ResourceLocation[] resourceLocations = new ResourceLocation[FleckItems.Ores.size()];
         Iterator<Ore> iterator = FleckItems.Ores.iterator();
         int i = 0;
         while (iterator.hasNext()) {
             Ore ore = (Ore) iterator.next();
-            if (ore.getHasChunk()) {
-                ResourceLocation location = new ModelResourceLocation(Reference.ResourcePath + ore.getChunkName());
+            if (ore.getHasDebris()) {
+                ResourceLocation location = new ModelResourceLocation(Reference.ResourcePath + ore.getDebrisName());
                 Fleck.Log.log(Level.INFO, location + " is the Resource Location");
                 resourceLocations[i] = location;
             }
             else {
-                ResourceLocation location = new ModelResourceLocation(Reference.ResourcePath + "chunkiron");
+                ResourceLocation location = new ModelResourceLocation(Reference.ResourcePath + "debrisiron");
                 Fleck.Log.log(Level.INFO, location + " is the Resource Location");
                 resourceLocations[i] = location;
             }
             i++;
         }
 
-        ModelBakery.registerItemVariants(FleckItems.ItemChunk, resourceLocations);
+        ModelBakery.registerItemVariants(FleckItems.ItemDebris, resourceLocations);
 
-        ModelLoader.setCustomMeshDefinition(FleckItems.ItemChunk, new ItemMeshDefinition()
+        ModelLoader.setCustomMeshDefinition(FleckItems.ItemDebris, new ItemMeshDefinition()
         {
             @Override
             public ModelResourceLocation getModelLocation(ItemStack stack)
             {
-                if(OreHandler.getOreFromStack(stack).getHasChunk()) {
-                    return new ModelResourceLocation(Reference.ResourcePath + OreHandler.getOreFromStack(stack).getChunkName());
+                if(OreHandler.getOreFromStack(stack).getHasDebris()) {
+                    return new ModelResourceLocation(Reference.ResourcePath + OreHandler.getOreFromStack(stack).getDebrisName());
                 }
                 else {
-                    return new ModelResourceLocation(Reference.ResourcePath + "chunkiron");
+                    return new ModelResourceLocation(Reference.ResourcePath + "debrisiron");
                 }
             }
 

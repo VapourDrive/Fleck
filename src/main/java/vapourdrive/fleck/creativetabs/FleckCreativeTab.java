@@ -35,7 +35,7 @@ public class FleckCreativeTab extends CreativeTabs {
     @Override
     @SideOnly(Side.CLIENT)
     public ItemStack getTabIconItem() {
-        return new ItemStack(FleckItems.ItemChunk);
+        return new ItemStack(FleckItems.ItemDebris);
     }
 
 
@@ -47,7 +47,7 @@ public class FleckCreativeTab extends CreativeTabs {
 //        if (timeSinceChance >= 250)
 //        {
 //            timeSinceChance = 0;
-//            ItemStack stack = new ItemStack(FleckItems.ItemChunk);
+//            ItemStack stack = new ItemStack(FleckItems.ItemDebris);
 //            stack.setItemDamage(0);
 //        }
 //        timeSinceChance++;

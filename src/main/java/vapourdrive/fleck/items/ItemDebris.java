@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import vapourdrive.fleck.materials.OreHandler;
-import vapourdrive.fleck.materials.Ores.ChunkComponent;
+import vapourdrive.fleck.materials.Ores.DebrisComponent;
 import vapourdrive.fleck.materials.Ores.Ore;
 import vapourdrive.fleck.Reference;
 import vapourdrive.fleck.Utils.RandomUtils;
@@ -22,12 +22,12 @@ import java.util.ArrayList;
 /**
  * Created by CBos on 11/25/2017.
  */
-public class ItemChunk extends Item {
-    public static final String PurityKey = "Fleck.Chunk.Purity";
+public class ItemDebris extends Item {
+    public static final String PurityKey = "Fleck.Debris.Purity";
 
-    public ItemChunk() {
-        this.setRegistryName("itemchunk");
-        this.setUnlocalizedName(Reference.ModID + "itemchunk");
+    public ItemDebris() {
+        this.setRegistryName("itemdebris");
+        this.setUnlocalizedName(Reference.ModID + "itemdebris");
         this.hasSubtypes = true;
         this.setCreativeTab(CommonProxy.FleckTab);
     }
@@ -38,14 +38,14 @@ public class ItemChunk extends Item {
         if (tab.equals(CommonProxy.FleckTab)) {
             for (int i = 0; i < FleckItems.Ores.size(); i++) {
                 Ore ore = FleckItems.Ores.get(i);
-                if (ore.getHasChunk() && OreHandler.doesOreExistFromString(ore.getOreDict())) {
+                if (ore.getHasDebris() && OreHandler.doesOreExistFromString(ore.getOreDict())) {
                     ItemStack stack = new ItemStack(this);
                     ItemStack pristineChunk = new ItemStack(this);
                     stack.setItemDamage(i);
                     pristineChunk.setItemDamage(i);
-                    RandomUtils.getNBT(stack).setInteger(ItemChunk.PurityKey, 0);
+                    RandomUtils.getNBT(stack).setInteger(ItemDebris.PurityKey, 0);
                     items.add(stack);
-                    RandomUtils.getNBT(pristineChunk).setInteger(ItemChunk.PurityKey, 4);
+                    RandomUtils.getNBT(pristineChunk).setInteger(ItemDebris.PurityKey, 4);
                     items.add(pristineChunk);
                 }
             }
@@ -56,9 +56,9 @@ public class ItemChunk extends Item {
     @SideOnly(Side.CLIENT)
     public String getItemStackDisplayName(ItemStack stack) {
         Ore ore = OreHandler.getOreFromStack(stack);
-        if (ore != null && ore.getHasChunk()) {
+        if (ore != null && ore.getHasDebris()) {
             EnumPurity purity = getPurityFromStack(stack);
-            return (purity.textColour + purity.getLocalizedName() + " " + I18n.format("item.fleck." + ore.getChunkName() + ".name"));
+            return (purity.textColour + purity.getLocalizedName() + " " + I18n.format("item.fleck." + ore.getDebrisName() + ".name"));
         }
         return (I18n.format("item.fleck.uhoh"));
     }
@@ -92,8 +92,8 @@ public class ItemChunk extends Item {
 
         }
 
-        ArrayList<ChunkComponent> components = OreHandler.getComponentsFromChunk(playerIn.getHeldItem(handIn));
-        for (ChunkComponent component : components) {
+        ArrayList<DebrisComponent> components = OreHandler.getComponentsFromChunk(playerIn.getHeldItem(handIn));
+        for (DebrisComponent component : components) {
             ItemStack stack = component.getStack(playerIn, getPurityFromStack(playerIn.getHeldItem(handIn)));
             if(stack != null && !stack.isEmpty()) {
                 playerIn.getHeldItem(handIn).shrink(1);

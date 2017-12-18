@@ -6,19 +6,19 @@ package vapourdrive.fleck.materials.Ores;
 public class Ore {
     private final String name;
     private final String oreDict;
-    private final String chunkName;
+    private final String debrisName;
     private final String material;
 
     public Ore(String name, String oreDict, String material) {
         this.name = name;
         this.oreDict = oreDict;
-        this.chunkName = "";
+        this.debrisName = "";
         this.material = material;
     }
-    public Ore(String name, String oreDict, String chunkName, String material) {
+    public Ore(String name, String oreDict, String debrisName, String material) {
         this.name = name;
         this.oreDict = oreDict;
-        this.chunkName = chunkName;
+        this.debrisName = debrisName;
         this.material = material;
     }
 
@@ -30,15 +30,15 @@ public class Ore {
         return this.oreDict;
     }
 
-    public boolean getHasChunk() {
-        if (chunkName != null) {
+    public boolean getHasDebris() {
+        if (debrisName != null) {
             return true;
         }
         return false;
     }
 
-    public String getChunkName() {
-        return this.chunkName;
+    public String getDebrisName() {
+        return this.debrisName;
     }
 
 

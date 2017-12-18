@@ -10,7 +10,7 @@ import vapourdrive.fleck.machines.finesmelter.BlockFineSmelter;
 
 public class FleckBlocks {
 
-    @GameRegistry.ObjectHolder(Reference.ResourcePath + "blockfinesmelter")
+    @GameRegistry.ObjectHolder(Reference.ResourcePath + "finesmelter")
     public static BlockFineSmelter FineSmelter;
 
     public static void preInit() {

@@ -2,26 +2,26 @@
 
 
 //Items
-item.fleck.chunkiron.name=Iron Chunk
-item.fleck.chunkcoal.name=Coal Chunk
-item.fleck.chunkgold.name=Gold Chunk
-item.fleck.chunklapis.name=Lapis Chunk
-item.fleck.chunkemerald.name=Emerald Chunk
-item.fleck.chunkdiamond.name=Diamond Chunk
-item.fleck.chunkredstone.name=Redstone Chunk
-item.fleck.chunkquartz.name=Quartz Chunk
-item.fleck.chunkcopper.name=Copper Chunk
-item.fleck.chunktin.name=Tin Chunk
-item.fleck.chunkaluminum.name=Aluminum Chunk
-item.fleck.chunklead.name=Lead Chunk
-item.fleck.chunksilver.name=Silver Chunk
-item.fleck.chunknickel.name=Nickel Chunk
-item.fleck.chunkplatinum.name=Platinum Chunk
-item.fleck.chunkmithril.name=Mithril Chunk
+item.fleck.debrisiron.name=Iron Debris
+item.fleck.debriscoal.name=Coal Debris
+item.fleck.debrisgold.name=Gold Debris
+item.fleck.debrislapis.name=Lapis Debris
+item.fleck.debrisemerald.name=Emerald Debris
+item.fleck.debrisdiamond.name=Diamond Debris
+item.fleck.debrisredstone.name=Redstone Debris
+item.fleck.debrisquartz.name=Quartz Debris
+item.fleck.debriscopper.name=Copper Debris
+item.fleck.debristin.name=Tin Debris
+item.fleck.debrisaluminum.name=Aluminum Debris
+item.fleck.debrislead.name=Lead Debris
+item.fleck.debrissilver.name=Silver Debris
+item.fleck.debrisnickel.name=Nickel Debris
+item.fleck.debrisplatinum.name=Platinum Debris
+item.fleck.debrismithril.name=Mithril Debris
 
-//Chunks
-chunk.purity.crude=Crude
-chunk.purity.rough=Rough
-chunk.purity.fair=Fair
-chunk.purity.pure=Pure
-chunk.purity.pristine=Pristine
+//Debriss
+debris.purity.crude=Crude
+debris.purity.rough=Rough
+debris.purity.fair=Fair
+debris.purity.pure=Pure
+debris.purity.pristine=Pristine

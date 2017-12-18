@@ -9,7 +9,7 @@ import java.util.Random;
 /**
  * Created by CBos on 12/4/2017.
  */
-public class ChunkComponent {
+public class DebrisComponent {
     private final int base;
     private final int max;
     private final float chance;
@@ -18,7 +18,7 @@ public class ChunkComponent {
     private final ItemStack stack;
     private final int minLevel;
 
-    public ChunkComponent (int base, int max, float chance, float purityChanceModifyer, EnumPurity minPurity, ItemStack stack, int minLevel)  {
+    public DebrisComponent(int base, int max, float chance, float purityChanceModifyer, EnumPurity minPurity, ItemStack stack, int minLevel)  {
         this.base = base;
         this.max = max;
         this.chance = chance;
@@ -28,7 +28,7 @@ public class ChunkComponent {
         this.minLevel = minLevel;
     }
 
-    public ChunkComponent (int base, int max, ItemStack stack) {
+    public DebrisComponent(int base, int max, ItemStack stack) {
         this.base = base;
         this.max = max;
         this.chance = 1.0F;
@@ -38,7 +38,7 @@ public class ChunkComponent {
         this.minLevel = 0;
     }
 
-    public ChunkComponent (int base, int max, float chance, ItemStack stack) {
+    public DebrisComponent(int base, int max, float chance, ItemStack stack) {
         this.base = base;
         this.max = max;
         this.chance = chance;

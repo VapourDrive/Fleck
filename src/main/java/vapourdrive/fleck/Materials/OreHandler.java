@@ -3,7 +3,7 @@ package vapourdrive.fleck.materials;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
-import vapourdrive.fleck.materials.Ores.ChunkComponent;
+import vapourdrive.fleck.materials.Ores.DebrisComponent;
 import vapourdrive.fleck.materials.Ores.Ore;
 import vapourdrive.fleck.items.FleckItems;
 
@@ -17,7 +17,7 @@ import java.util.List;
 public class OreHandler {
 
     public static Ore getOreFromStack(ItemStack stack) {
-        if (stack.getItem() == FleckItems.ItemChunk) {
+        if (stack.getItem() == FleckItems.ItemDebris) {
             return FleckItems.Ores.get(stack.getItemDamage());
         }
         return null;
@@ -41,8 +41,8 @@ public class OreHandler {
         int[] names = OreDictionary.getOreIDs(new ItemStack(block));
         for (int name : names) {
             for (Ore ore : FleckItems.Ores) {
-                if (ore.getHasChunk() && ore.getOreDict().equals(OreDictionary.getOreName(name))) {
-                    return ore.getChunkName();
+                if (ore.getHasDebris() && ore.getOreDict().equals(OreDictionary.getOreName(name))) {
+                    return ore.getDebrisName();
                 }
             }
         }
@@ -52,8 +52,8 @@ public class OreHandler {
     public static int getMetaFromChunkName(String chunk){
         int i = 0;
         for(Ore ore : FleckItems.Ores) {
-            if(ore.getHasChunk()) {
-                if(ore.getChunkName().equals(chunk)) {
+            if(ore.getHasDebris()) {
+                if(ore.getDebrisName().equals(chunk)) {
                     return i;
                 }
             }
@@ -71,8 +71,8 @@ public class OreHandler {
         return null;
     }
 
-    public static ArrayList<ChunkComponent> getComponentsFromChunk(ItemStack stack) {
-        ArrayList<ChunkComponent> components = FleckItems.Chunks.get(stack.getItemDamage()).getComponents();
+    public static ArrayList<DebrisComponent> getComponentsFromChunk(ItemStack stack) {
+        ArrayList<DebrisComponent> components = FleckItems.Debris.get(stack.getItemDamage()).getComponents();
 
         return components;
     }

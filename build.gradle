@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 version = "0.1"
 group = "vapourdrive.fleck" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "fleck"
+archivesBaseName = "Fleck"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {
